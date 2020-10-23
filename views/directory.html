@@ -1,0 +1,20 @@
+<div class="content">
+    <input type="text" ng-model="srch" placeholder="Search for a user...">
+      <button ng-click="order = 'name'">Order by Name</button>
+      <button ng-click="order = 'level'">Order by Level</button>        
+      <ul id="user-list">
+        <li ng-repeat="user in users | orderBy: order | filter: srch" ng-show="user.available">
+          <img ng-src="http://placehold.it/50x50/666666/ffffff" alt="thumbnail" style="margin: -12px 10px 0 0; width: 50px; float: left;">
+          <h3> {{ user.name }}</h3>
+          <div class="remove" ng-click="removeUser(user)">x</div>
+          <span class="belt" style="background: {{ user.background }}">Level: {{ user.level  }}</span>
+        </li>
+      </ul>
+      <form ng-submit="addUser()">
+        <input type="text" placeholder="Name" ng-model="newuser.name">
+        <input type="text" placeholder="Level" ng-model="newuser.level">
+        <input type="text" placeholder="Background" ng-model="newuser.background">
+        <input type="submit" value="Add new user">
+      </form>
+      <a href="" ng-click="removeAll()">Remove all users</a>
+  </div>

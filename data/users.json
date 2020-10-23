@@ -1,0 +1,16 @@
+[{
+	"name": "Oguz",
+	"level": 5,
+	"available": true,
+	"background": "blue"
+}, {
+	"name": "Alp",
+	"level": 4,
+	"available": true,
+	"background": "green"
+}, {
+	"name": "Henrik",
+	"level": 4,
+	"available": true,
+	"background": "red"
+}]
